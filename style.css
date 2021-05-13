@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1d2d2;
+}
+
+section {
+  margin-bottom: 3%;
+  padding: 3%;
+  width: 80%;
+  background-color: rgb(251, 242, 133);
+  background: radial-gradient(
+    circle,
+    #e6e6e6 0%,
+    #d9d9d9 35%,
+    #bfbfbf 100%);
+ border-radius: 2rem;
+}
+
+
+#form {
+  display: flex;
+  flex-direction: row;
+}
+
+
+#input {
+  display: block;
+  margin-right: 5%;
+  flex: 3;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  border-bottom: 4px solid rgb(128, 128, 128);
+  color: #333533;
+  background: transparent;
+}
+
+#input:focus {
+	outline: 0;
+	border-color:#282e28;
+  background: transparent;
+}
+
+
+button {
+  /* display: block; */
+  margin-right: 5%;
+  color: white;
+  background-color: #242423;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  
+}
+
+h2 {
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border-bottom: 3px solid black;
+  margin-bottom: 5%;
+}
+#weatherNow {
+  display: flex;
+  justify-content: space-around;
+}
+
+#map {
+  z-index: 2;
+  width: 65%;
+  border-radius: 25%;
+  box-shadow: 5px 5px black;
+}
+
+#weeklyForcast{
+  width: 95%;
+  flex-wrap: nowrap;
+}
+
+#daysForecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items:flex-start;
+}
+
+.dateFormat {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px groove grey;
+}
+
+.dayForecastContainer {
+  padding: 0.1rem;
+  margin-bottom: 0.1rem;
+  font-size: 0.9rem;
+  height: 12%;
+  border-bottom: 1px dashed black;
+}
+
+.dayForecastContainer p, .dayForecastContainer div {
+  padding: 0.3rem 0;
+}
+
+.display {
+  display: none;
+}
+
+.selection {
+  margin: 2% 0;
+}
+
+.form-check-label{
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: center;
+}
+
+.locationWeather{
+  color: #3e3a39;
+  background: #b1a7a6;
+  width: 50%;
+}
+
+.weather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+
+.location {
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
+  margin-left: 5%;
+}
+
+
+.desc {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+.fa-temperature-low {
+  color: blue;
+  margin-right: 0.3rem;
+}

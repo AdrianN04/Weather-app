@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="fontAwesome/css/all.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Weather app Revised</title>
+  </head>
+  <body>
+    <section class="inputContainer">
+      <div id="form" class="form-row">
+        <div class="form-group col">
+          <input type="text" id="input" placeholder="Insert city name....." />
+        </div>
+        <div class="form-group col">
+          <button id="weatherNowButton">Weather Now</button>
+          <button id="weatherForecastButton">Weather Forcast</button>
+        </div>
+      </div>
+      <div class="selection">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="celsius" name="temp" value="metric">
+          <label class="form-check-label" for="celsius">Celsius</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="farenheit" name="temp" value="imperial">
+          <label class="form-check-label" for="farenheit">Farenheit</label>
+        </div>
+      </div>
+      <button id="weatherLocationButton" class="display">Weather</button>
+    </section>
+    
+    <section id="locationWeather" class="container locationWeather">
+      <div class="location">
+        <img src="" alt="" id="weather-icon">
+        <div id="location">Unable to Fetch Weather</div>
+        <div class="desc">No Information Available.</div>
+        <div class="weather">
+            <div><i class="fas fa-temperature-low"></i></div>
+            <div class="tempDegree">Error</div>
+        </div>
+        <div class="info">
+            <h4>Sunrise: <span class="sunrise">No Information Available</span></h4>
+            <h4>Sunset: <span class="sunset">No Information Available</span></h4>
+        </div>
+    </section>
+    
+    <section id="weatherNowSection" class="container display">
+      <h2 id="weatherNowTitle">Weather Now</h2>
+      <div id="weatherNow">
+        <div id="description">
+        </div>
+        <div id="map"></div>
+      </div>
+    </section>
+
+    <section id="weeklyForcast" class="display">
+      <h2 id="weeklyForcastTitle">Weather for the coming days</h2>
+      <div id="daysForecast"></div>
+    </section>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlC_RLtIBu1W3qAw7hnxyHnzdgRsl-pVg"
+    ></script>
+
+    <script src="location.js"></script>
+
+    <script src="weatherForecast.js"></script>
+  </body>
+</html>
